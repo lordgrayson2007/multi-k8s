@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: dh-technology-com-tls
+spec:
+  secretName: dh-technology-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: dh-technology.com
+  dnsNames:
+    - dh-technology.com
+    - www.dh-technology.com
